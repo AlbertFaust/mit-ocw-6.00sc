@@ -11,34 +11,33 @@ Finally, print the result, which should include the total amount paid that year 
 '''
 #!/usr/bin/env python2.7
 def printVals():
-    if months != 11:
-        print 'Month: ', months+1
-        print 'Minimum Monthly Payment: $', minimumMonthlyPayment
-        print 'Principle Paid: $', principlePaid
-        print 'Remaining Balance: $', remainingBalance
-    else:
-        print 'Month: ', months+1
-        print 'Minimum Monthly Payment: $', minimumMonthlyPayment
-        print 'Principle Paid: $', principlePaid
-        print 'Remaining Balance: $', remainingBalance
+    print 'Month: ', months+1
+    print 'Minimum Monthly Payment: $', minimumMonthlyPayment
+    print 'Principle Paid: $', principlePaid
+    print 'Remaining Balance: $', balance
+    if months == 11:
         print
         print 'RESULT'
         print 'Total Amount Paid: $', totalAmountPaid
         print 'Remaining Balance: $', balance
+    return
+
+def calcBal(balance, annualInterestRate, minimumPaymentRate, totalAmountPaid):
+    global minimumMonthlyPayment
+    global principlePaid                                                                                                                                        
+    minimumMonthlyPayment = round(minimumPaymentRate * balance, 2)
+    interestPaid = round(annualInterestRate / 12 * balance, 2)
+    principlePaid = round(minimumMonthlyPayment - interestPaid, 2)
+    balance = round(balance - principlePaid, 2)
+    totalAmountPaid = totalAmountPaid + minimumMonthlyPayment
+    return minimumMonthlyPayment, principlePaid, totalAmountPaid, balance, annualInterestRate, minimumPaymentRate, totalAmountPaid
 
 balance = float(input('Please enter the outstanding balance on your credit card: '))
 annualInterestRate = float(input('Please enter the Annual Interest Rate as a decimal: '))
 minimumPaymentRate = float(input('Please enter the Minimum Monthly Payment Rate as a decimal: '))
 
 totalAmountPaid = 0
-months = 12
 
 for months in range(0, 12):
-        minimumMonthlyPayment = round(minimumPaymentRate * balance, 2)
-        interestPaid = round(annualInterestRate / 12 * balance, 2)
-        principlePaid = round(minimumMonthlyPayment - interestPaid, 2)
-        remainingBalance = round(balance - principlePaid, 2)
-        balance = remainingBalance
-        totalAmountPaid = totalAmountPaid + minimumMonthlyPayment
+        calcBal(balance, annualInterestRate, minimumPaymentRate, totalAmountPaid)
         printVals()
-   
