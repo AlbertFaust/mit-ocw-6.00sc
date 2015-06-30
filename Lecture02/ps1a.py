@@ -20,17 +20,7 @@ def printVals():
         print 'RESULT'
         print 'Total Amount Paid: $', totalAmountPaid
         print 'Remaining Balance: $', balance
-    return
-
-def calcBal(balance, annualInterestRate, minimumPaymentRate, totalAmountPaid):
-    global minimumMonthlyPayment
-    global principlePaid                                                                                                                                        
-    minimumMonthlyPayment = round(minimumPaymentRate * balance, 2)
-    interestPaid = round(annualInterestRate / 12 * balance, 2)
-    principlePaid = round(minimumMonthlyPayment - interestPaid, 2)
-    balance = round(balance - principlePaid, 2)
-    totalAmountPaid = totalAmountPaid + minimumMonthlyPayment
-    return minimumMonthlyPayment, principlePaid, totalAmountPaid, balance, annualInterestRate, minimumPaymentRate, totalAmountPaid
+    return                                                                                                                                                      
 
 balance = float(input('Please enter the outstanding balance on your credit card: '))
 annualInterestRate = float(input('Please enter the Annual Interest Rate as a decimal: '))
@@ -39,5 +29,9 @@ minimumPaymentRate = float(input('Please enter the Minimum Monthly Payment Rate 
 totalAmountPaid = 0
 
 for months in range(0, 12):
-        calcBal(balance, annualInterestRate, minimumPaymentRate, totalAmountPaid)
-        printVals()
+    minimumMonthlyPayment = round(minimumPaymentRate * balance, 2)
+    interestPaid = round(annualInterestRate / 12 * balance, 2)
+    principlePaid = round(minimumMonthlyPayment - interestPaid, 2)
+    balance = round(balance - principlePaid, 2)
+    totalAmountPaid = totalAmountPaid + minimumMonthlyPayment
+    printVals()
