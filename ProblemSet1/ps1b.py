@@ -30,7 +30,6 @@ balance = float(input('Please enter the outstanding balance on your credit card:
 annualInterestRate = float(input('Please enter the Annual Interest Rate as a decimal: '))
 monthlyInterestRate = annualInterestRate / 12.0
 minimumMonthlyPayment = 0
-#numberOfMonths = 0
 new = balance
 
 while(balance > 0):
