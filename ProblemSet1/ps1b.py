@@ -14,7 +14,7 @@ Notice that it is possible for the balance to become negative using this payment
 def printVals():
     print 'RESULT'
     print 'Monthly Payment to Pay Off Debt in 1 Year: $', minimumMonthlyPayment
-   # print 'Number of Months Needed: ', numberOfMonths
+    print 'Number of Months Needed: ', numberOfMonths
     print 'Balance: $', balance
     return
 
@@ -22,21 +22,19 @@ def minMonth(balance, monthlyInterestRate, minimumMonthlyPayment, new):
     numberOfMonths = 0
     while balance > 0 and numberOfMonths < 12:
         minimumMonthlyPayment = minimumMonthlyPayment + 10
-        new = new * (1 + monthlyInterestRate) - minimumMonthlyPayment
+        balance = balance * (1 + monthlyInterestRate) - minimumMonthlyPayment
         numberOfMonths = numberOfMonths + 1
-        print new
+        print balance
 
 balance = float(input('Please enter the outstanding balance on your credit card: '))
 annualInterestRate = float(input('Please enter the Annual Interest Rate as a decimal: '))
 monthlyInterestRate = annualInterestRate / 12.0
 minimumMonthlyPayment = 0
-new = balance
 
 while(balance > 0):
     minMonth(balance, monthlyInterestRate, minimumMonthlyPayment,new)
-    if(new > 0):
+    if(balance > 0):
         minimumMonthlyPayment = minimumMonthlyPayment + 10
         minMonth(balance,monthlyInterestRate, minimumMonthlyPayment,new)
-        balance = new
     print balance
 printVals()
