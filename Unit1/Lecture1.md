@@ -41,3 +41,14 @@ __Iteration 2:__
 * A lot of computational techniques involve 'guess and check', this involves generating guesses and checking whether they are correct.   
 
 ####Algorithms<br>
+An **algorithm** is a description of how to perform a computation. It contains:
+* _Set of Instructions_
+* _Flow of Control (order)_
+* _Termination Condition_
+
+**Set of Instructions:** these are the steps that can be executed.<br>
+_In the example above the set of instructions is the 'recipe' of the program, the 4 steps._  
+**Flow of Control:** this is the order in which the instructions are executed.<br>
+_In the example above the flow of control is the order these steps are performed in, i.e 1, 2, 3, 4 repeat_  
+**Termination Condition:** this tells the program when to stop. Without this the program will run to infinity.<br>
+_In the example above the termination condition is that if g * g is 'close enough' to x._  
