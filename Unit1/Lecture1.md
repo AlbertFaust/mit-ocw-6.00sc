@@ -52,3 +52,5 @@ _In the example above the set of instructions is the 'recipe' of the program, th
 _In the example above the flow of control is the order these steps are performed in, i.e 1, 2, 3, 4 repeat_  
 **Termination Condition:** this tells the program when to stop. Without this the program will run to infinity.<br>
 _In the example above the termination condition is that if g * g is 'close enough' to x the algorithm converges._  
+  
+####Fixed Program and Stored Program computers<br>
