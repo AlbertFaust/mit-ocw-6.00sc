@@ -53,4 +53,18 @@ _In the example above the flow of control is the order these steps are performed
 **Termination Condition:** this tells the program when to stop. Without this the program will run to infinity.<br>
 _In the example above the termination condition is that if g * g is 'close enough' to x the algorithm converges._  
   
-####Fixed Program and Stored Program computers<br>
+####Fixed Program and Stored Program Computers<br>
+One way to impliment an algorithm would be to design a machine to perform the task. For example make a circuit that would specifically do square roots. This is the way that all computers used to work.<br>
+  
+**Fixed Program Computers** are machines designed to do very specific things. For example, during World War II, Alan Turning built a machine specifically designed to crack the Enigma Code. That is all the machine could do. These computers were very limited.  
+  
+**Stored Program Computers** were a big breakthrough in computation. The basic notion of a stored program computer is that the instructions are the same as the data. As there is no distinction between the program that impliments the algorithm and the data on which the program operates, it is possible to change the program anytime you want. Machines became infinatly flexible as programs could produce programs because programs can produce data (as programs and data are the same thing).  
+  
+Stored Program Computers are what we use today and they are made up of: <br>
+* _Memory_ 
+* _Control Unit_
+* _Arithmetic Logic Unit_
+  - _Accumulator_
+* _Input/Output Devices_
+
+An **interpreter** is a program that can execute any legal set of instructions. 
