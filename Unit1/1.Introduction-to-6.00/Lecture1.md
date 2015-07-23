@@ -1,6 +1,6 @@
 ------------
 <h3 align="center">
-Lecture 1: Introduction to 6.00                                                                                                                                                
+Lecture 1: Introduction to 6.00                                                                                                                                           	 
 </h3>
 <p align="center">
 <a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/unit-1/lecture-1-introduction-to-6.00/">MIT OpenCourseWare</a>
@@ -84,7 +84,23 @@ More than anything it's the '_combining mechanisms_' that separate one language 
 * _Semantics_
  
 **Syntax**: tells us which sequences of characters and symbols constitute a well-formed string. Well-formed does not necessarily mean meaningful. Something can be syntactically correct but may make no sense.  
-  
 **Static Semantics**: tells us which well-formed strings have meaning.  
-  
 **Semantics**: looks only at the strings that are both syntactically correct and static semantically correct. It assigns real meaning to them and removes ambiguity.  
+ 
+####Types of Error<br>
+When a program does not do what is expected it may:  
+* _Crash_  
+* _Infinately Loop_  
+* _Incorrect Output_
+ 
+**Crash**: when a program crashes it stops running and produces some indication that it has done so. This is the best type of error because it is obvious straight away that there is a problem with the code that needs to be fixed.  
+**Infinite Loop**: sometimes a program will never stop. This can take some time to diagnose if you are unsure of how long the program is supposed to run. These errors are usually down to an error with the flow of control.  
+**Incorrect Output**: these are the worst errors of all. They are often not immediately noticeable and can have devastating consequences. Ideally a program should be composed of strong static semantics to reduce the probability of it behaving unexpectedly.  
+ 
+####Compiled vs Interpreted Language<br>
+**Interpreted**: `source code -> checker -> interpreter -> output`  
+* _Iterpreted Languages are easier to debug than compiled languages as the source code is interpreted and errors are described in the language of the source code (the code you wrote)._  
+ 
+**Compiled**: `source code -> checker/compiler -> object code -> interpreter -> output`  
+* _Compiled Languages first compile the code to object code. This code is closer to the language of the computer, the problem here is that the error messages are in terms of the object code and can be very obscure._   
+* _The advantage of compiled code is that it is usually more efficient. They go through this extra step which means that they take less time to run._ 
