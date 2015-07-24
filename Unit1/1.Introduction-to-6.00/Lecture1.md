@@ -104,3 +104,23 @@ When a program does not do what is expected it may:
 **Compiled**: `source code -> checker/compiler -> object code -> interpreter -> output`  
 * _Compiled Languages first compile the code to object code. This code is closer to the language of the computer, the problem here is that the error messages are in terms of the object code and can be very obscure._   
 * _The advantage of compiled code is that it is usually more efficient. They go through this extra step which means that they take less time to run._ 
+  
+------------
+<h3 align="center">
+Check Yourself: MIT Answers                                                                                                                                                
+</h3>
+<p align="center">
+<a href="linktomyanswers">My Answers</a>
+</p>
+------------
+**What is the difference between declarative and imperative knowledge?**  
+Declarative knowledge is statements of fact; imperative knowledge is "how to" knowledge.  
+ 
+**What is the advantage of a stored-program computer?**  
+It's far more versatile than a fixed-program computer, since it interprets a program given to it and carries out those instructions, as opposed to being built to do one thing.  
+ 
+**What are the syntax, static semantics, and semantics of a language?**  
+Syntax determines whether a string is legal, static semantics determine whether the string has meaning, and semantics assigns a meaning to a legal sentence (assuming no static semantic errors).  
+ 
+**What sorts of errors can occur in a program?**  
+It can crash, run forever, or give a wrong answer.  
